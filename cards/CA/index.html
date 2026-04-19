@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 卡牌链接容器 */
+  .card-link {
+    position: relative;
+    display: inline-block;
+    color: #0066cc;
+    text-decoration: underline;
+    cursor: help;
+  }
 
+  /* 悬浮时显示的图片 */
+  .card-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.8em;
+    width: 180px;
+    height: 250px;
+    background-image: var(--card-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    pointer-events: none;  /* 让鼠标可以穿透，不干扰点击 */
+  }
+
+  /* 为每个卡牌单独指定图片 */
+  .card-CA-001 { --card-img: url('images/CA-001.png'); }
+  .card-CA-002 { --card-img: url('images/CA-002.png'); }
+  /* ... 继续添加其他卡牌 */
+</style>
+</head>
+<body>
+
+<h1>卡牌总览喵喵喵...都怪我，这是用AI写的...</h1>
+  
+<p><span class="card-link card-CA-001"><font color="blue">CA-001 攻击</font></span></p>
+
+<p><span class="card-link card-CA-002"><font color="blue">CA-002 攻击</font></span></p>
+
+</body>
+</html>
